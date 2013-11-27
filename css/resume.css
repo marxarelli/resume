@@ -1,0 +1,397 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**
+ * Normalize.
+ */
+article, footer, header, nav, section {
+  display: block;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+code {
+  font-family: monospace, serif;
+  font-size: 0.75em;
+  display: inline-block;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Grid and spacing.
+ */
+article > .container > section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+ul > li {
+  margin-bottom: 0.2em;
+}
+
+/* header and body */
+@media screen {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    min-height: 130px;
+    padding: 10px 0;
+  }
+
+  body {
+    position: relative;
+    padding-top: 130px;
+  }
+}
+
+/* centered containers */
+@media screen {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 970px;
+  }
+
+}
+
+@media screen and (max-width: 479px) {
+  .container {
+    padding-left: 10px;
+  }
+}
+
+/* columnar elements */
+@media screen and (min-width: 768px), print {
+  .columnar:before, .columnar:after {
+    content: ' ';
+    display: table;
+  }
+
+  .columnar:after {
+    clear: both;
+  }
+
+  .columnar {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .columnar > * {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  header .columnar {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  header .columnar > * {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .columnar > .c1 { width: 16.666666666666664%; }
+  .columnar > .c2 { width: 33.333333333333333%; }
+  .columnar > .c3 { width: 50%; }
+}
+
+/**
+ * Nav.
+ */
+@media screen {
+  header img {
+    border-radius: 50%;
+    float: right;
+    margin: 5px;
+  }
+
+  header nav > ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  header nav > ul > li {
+    position: relative;
+    display: table-cell;
+    width: 1%;
+  }
+
+  header nav > ul > li > a {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    padding: 5px 10px;
+    line-height: 1.2;
+  }
+
+  header a {
+    text-decoration: none;
+  }
+
+  header nav > ul > li > a:before {
+    font-weight: normal;
+    font-family: FontAwesome;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header nav {
+    margin-top: 26.6px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header h1, header h2, header h3 {
+    text-align: center;
+  }
+
+  header nav > ul {
+    margin-top: 5px;
+  }
+
+  header img {
+    display: none;
+  }
+}
+
+/**
+ * Icons.
+ */
+header nav > ul > li > a.director:before { content: "\f14e"; }
+header nav > ul > li > a.engineer:before { content: "\f0ad"; }
+header nav > ul > li > a.devops:before { content: "\f085"; }
+
+section ul {
+  padding-left: 20px;
+}
+
+section ul.icons {
+  list-style: none;
+  padding-left: 25px;
+}
+
+li.director, li.engineer, li.devops {
+  position: relative;
+}
+
+li.director:before, li.engineer:before, li.devops:before {
+  position: absolute;
+  top: 0.125em;
+  left: -25px;
+  min-width: 20px;
+  text-align: center;
+
+  font-family: FontAwesome;
+  font-size: smaller;
+}
+
+li.director:before { content: "\f14e"; }
+li.engineer:before { content: "\f0ad"; }
+li.devops:before { content: "\f085"; }
+
+@media screen and (min-width: 768px) {
+  section ul.icons {
+    padding-left: 30px;
+  }
+
+  li.director:before, li.engineer:before, li.devops:before {
+    left: -25px;
+  }
+}
+
+/**
+ * Font weights and sizing.
+ */
+body {
+  font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.428571429;
+}
+
+a, h1, h2, h3 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+}
+
+section#roles p {
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  line-height: 1.1;
+  color: inherit;
+}
+
+h1 { font-size: 36px }
+h2 { font-size: 24px }
+h3 { font-size: 18px }
+
+header h1, header h2, header h3 { margin: 0; }
+header h1 { font-size: 36px; }
+header h2 { font-size: 24px; }
+header h3 { font-size: 18px; }
+
+@media (max-width: 767px) {
+  header h1 { font-size: 22px; }
+  header h2 { font-size: 16px; }
+  header h3 { font-size: 14px; }
+
+  header nav > ul > li > a {
+    font-size: 14px;
+  }
+}
+
+/**
+ * Color, highlighting, and transitions.
+ */
+@media screen {
+  body {
+    background-color: #262626;
+    color: #ccc;
+  }
+
+  header {
+    background-color: #f2674a;
+    color: white;
+  }
+
+  header a, header a:visited {
+    color: #724d45;
+  }
+
+  header a:hover, header a:focus {
+    color: white !important;
+  }
+
+  header h1 > a {
+    color: white !important;
+  }
+
+  article > div > section > h1 {
+    color: #f2674a;
+  }
+
+  article > div a, article > div a:visited {
+    color: white;
+    text-decoration: none;
+  }
+
+  article > div a:hover, article > div a:focus {
+    text-decoration: underline;
+  }
+
+  section > section > h1, section > section > h2, section > section > h3 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  section > h3 {
+    color: #777;
+  }
+
+  header, h1, p, section > ul > li, div > ul > li { transition: color 0.5s, background-color 0.5s; }
+  .exp { transition: background-color 0.5s; }
+  a { transition: color 0.2s; }
+
+  .exp {
+    font-size: smaller;
+    padding: 1px 3px;
+    margin-left: 2px;
+    background-color: #724d45;
+    border-radius: 3px;
+  }
+
+  /* discipline focus */
+  body.focus-on-director .engineer, body.focus-on-director .devops,
+  body.focus-on-engineer .director, body.focus-on-engineer .devops,
+  body.focus-on-devops .director, body.focus-on-devops .engineer { color: #555; }
+
+  body.focus-on-director .engineer a, body.focus-on-director .devops a,
+  body.focus-on-engineer .director a, body.focus-on-engineer .devops a,
+  body.focus-on-devops .director a, body.focus-on-devops .engineer a { color: #555; }
+
+  body.focus-on-director .engineer .exp, body.focus-on-director .devops .exp,
+  body.focus-on-engineer .director .exp, body.focus-on-engineer .devops .exp,
+  body.focus-on-devops .director .exp, body.focus-on-devops .engineer .exp { background-color: #222; }
+
+  body.focus-on-director header { background-color: #12A56D; }
+  body.focus-on-director article > div > section > h1 { color: #12A56D; }
+  body.focus-on-director header a.focus-on, body.focus-on-director header a { color: #015837; }
+  body.focus-on-director header a.focus-on.director { color: white; }
+
+  body.focus-on-engineer header { background-color: #A53922; }
+  body.focus-on-engineer article > div > section > h1 { color: #A53922; }
+  body.focus-on-engineer header a.focus-on, body.focus-on-engineer header a { color: #F18F7A; }
+  body.focus-on-engineer header a.focus-on.engineer { color: white; }
+
+  body.focus-on-devops header { background-color: #203A3F; }
+  body.focus-on-devops article > div > section > h1 { color: #6EC6D8; }
+  body.focus-on-devops header a.focus-on, body.focus-on-devops header a { color: #6EC6D8; }
+  body.focus-on-devops header a.focus-on.devops { color: white; }
+}
+
+/**
+ * Print friendly.
+ */
+@media print {
+  header a { text-decoration: none; }
+
+  img { display: none; }
+  nav { display: none; }
+  a, a:visited, a:hover, a:focus { color: black; }
+
+  body { font-size: 11pt; }
+  section#roles p { font-size: 11pt; }
+
+  h1 { font-size: 16pt; }
+  h2 { font-size: 14pt; }
+  h3 { font-size: 12pt; }
+
+  code { font-size: 9pt; }
+
+  ul > li { font-size: 11pt; }
+
+  li.director:before, li.engineer:before, li.devops:before {
+    font-size: 9pt;
+  }
+
+  .exp:before, .exp:after { display: inline; }
+  .exp:before { content: '('; }
+  .exp:after { content: ')'; }
+}
