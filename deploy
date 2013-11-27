@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+require 'aws-sdk'
+require 'mime-types'
+
+def notice(msg)
+  STDERR.puts msg
+end
+
+unless ARGV.length > 0
+  notice "Usage: #{$0} bucket"
+  exit 1
+end
+
+s3 = AWS::S3.new(:access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+                 :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'])
+
+bucket = s3.buckets[ARGV.first]
+
+Dir['**/*.{html,css,js}'].each do |path|
+  notice "#{path} -> #{bucket.name}/#{path}"
+
+  obj = bucket.objects[path]
+  obj.write(Pathname.new(path))
+
+  if type = MIME::Types.of(path).first
+    obj.metadata['Content-Type'] = type
+  end
+
+  obj.acl = :public_read
+end
