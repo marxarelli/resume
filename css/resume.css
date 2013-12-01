@@ -23,6 +23,12 @@ article, footer, header, nav, section {
 
 body {
   margin: 0;
+
+  /* debug *
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0) 5%);
+  background-size: 100% 1.5em;
+  background-position: left top;
+  /* end debug */
 }
 
 code {
@@ -39,17 +45,25 @@ pre {
  * Grid and spacing.
  */
 article > .container > section {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
-h1, h2, h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+ul {
+  margin: 1.5em 0 1.5em 0;
 }
 
 ul > li {
-  margin-bottom: 0.2em;
+  margin: 0;
+}
+
+li > ul {
+  margin: 0;
+}
+
+p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 /* header and body */
@@ -238,7 +252,7 @@ li.devops:before { content: "\f085"; }
 body {
   font-family: Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.428571429;
+  line-height: 1.5;
 }
 
 a, h1, h2, h3 {
@@ -249,20 +263,33 @@ p {
   font-weight: 400;
 }
 
-section#roles p {
-  font-size: 16px;
+h1, h2, h3 {
+  color: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-h1, h2, h3 {
+h1 {
+  font-size: 36px;
+  line-height: 1.33333333333333;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.09090909090909;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.33333333333333;
+}
+
+header h1, header h2, header h3 {
   line-height: 1.1;
   color: inherit;
+  margin: 0;
 }
 
-h1 { font-size: 36px }
-h2 { font-size: 24px }
-h3 { font-size: 18px }
-
-header h1, header h2, header h3 { margin: 0; }
 header h1 { font-size: 36px; }
 header h2 { font-size: 24px; }
 header h3 { font-size: 18px; }
@@ -314,11 +341,6 @@ header h3 { font-size: 18px; }
 
   article > div a:hover, article > div a:focus {
     text-decoration: underline;
-  }
-
-  section > section > h1, section > section > h2, section > section > h3 {
-    margin-top: 5px;
-    margin-bottom: 10px;
   }
 
   section > h3 {
