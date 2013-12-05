@@ -74,8 +74,8 @@ p {
   margin: 1.5em 0 0 0;
 }
 
-#current-employment > h1, #past-employment > h1, #education > h1 {
-  margin-bottom: .5em;
+#current-employment > section, #past-employment > section, #education > section {
+  margin-top: 1.5em;
 }
 
 /* header and body */
