@@ -22,12 +22,12 @@ article, footer, header, nav, section {
 }
 
 body {
-  margin: 0;
+  margin: 0 0 3em 0;
 
   /* debug *
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0) 5%);
   background-size: 100% 1.5em;
-  background-position: left top;
+  background-position: left 130px;
   /* end debug */
 }
 
@@ -44,13 +44,13 @@ pre {
 /**
  * Grid and spacing.
  */
-article > .container > section {
-  margin-top: 24px;
-  margin-bottom: 24px;
+article > .container > section, section#past-employment {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 ul {
-  margin: 1.5em 0 1.5em 0;
+  margin: 1.5em 0;
 }
 
 ul > li {
@@ -64,6 +64,18 @@ li > ul {
 p {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
+}
+
+#roles p:last-child {
+  margin-bottom: 0;
+}
+
+#skills ul {
+  margin: 1.5em 0 0 0;
+}
+
+#current-employment > h1, #past-employment > h1, #education > h1 {
+  margin-bottom: .5em;
 }
 
 /* header and body */
@@ -151,6 +163,10 @@ p {
     margin: 5px;
   }
 
+  header section {
+    margin-top: 4px;
+  }
+
   header nav > ul {
     padding: 0;
     margin: 0;
@@ -183,7 +199,7 @@ p {
 
 @media screen and (min-width: 768px) {
   header nav {
-    margin-top: 26.6px;
+    margin-top: 22px;
   }
 }
 
@@ -290,14 +306,24 @@ header h1, header h2, header h3 {
   margin: 0;
 }
 
+header h3 {
+  line-height: 1.2;
+}
+
 header h1 { font-size: 36px; }
 header h2 { font-size: 24px; }
-header h3 { font-size: 18px; }
+header h3 { font-size: 14px; }
 
 @media (max-width: 767px) {
+  header { padding: 5px 0 6px; }
+
   header h1 { font-size: 22px; }
   header h2 { font-size: 16px; }
   header h3 { font-size: 14px; }
+
+  header nav > ul {
+    margin-top: 0;
+  }
 
   header nav > ul > li > a {
     font-size: 14px;
@@ -345,6 +371,10 @@ header h3 { font-size: 18px; }
 
   section > h3 {
     color: #777;
+  }
+
+  header section > h3 {
+    color: #724d45;
   }
 
   header, h1, p, section > ul > li, div > ul > li { transition: color 0.5s, background-color 0.5s; }
@@ -398,19 +428,21 @@ header h3 { font-size: 18px; }
   nav { display: none; }
   a, a:visited, a:hover, a:focus { color: black; }
 
-  body { font-size: 11pt; }
-  section#roles p { font-size: 11pt; }
+  body { font-size: 14px; }
 
-  h1 { font-size: 16pt; }
-  h2 { font-size: 14pt; }
-  h3 { font-size: 12pt; }
+  h1 {
+    font-size: 20px;
+    line-height: 1.05;
+  }
 
-  code { font-size: 9pt; }
+  h2 {
+    font-size: 18px;
+    line-height: 1.16666666666667;
+  }
 
-  ul > li { font-size: 11pt; }
-
-  li.director:before, li.engineer:before, li.devops:before {
-    font-size: 9pt;
+  h3 {
+    font-size: 16px;
+    line-height: 1.3125;
   }
 
   .exp:before, .exp:after { display: inline; }
