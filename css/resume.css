@@ -379,7 +379,7 @@ header h3 { font-size: 14px; }
 
   header, h1, p, section > ul > li, div > ul > li { transition: color 0.5s, background-color 0.5s; }
   .exp { transition: background-color 0.5s; }
-  a { transition: color 0.2s; }
+  a, header section < h3 { transition: color 0.2s; }
 
   .exp {
     font-size: smaller;
@@ -404,17 +404,20 @@ header h3 { font-size: 14px; }
 
   body.focus-on-director header { background-color: #12A56D; }
   body.focus-on-director article > div > section > h1 { color: #12A56D; }
-  body.focus-on-director header a.focus-on, body.focus-on-director header a { color: #015837; }
+  body.focus-on-director header a.focus-on, body.focus-on-director header a,
+  body.focus-on-director header section > h3 { color: #015837; }
   body.focus-on-director header a.focus-on.director { color: white; }
 
   body.focus-on-engineer header { background-color: #A53922; }
   body.focus-on-engineer article > div > section > h1 { color: #A53922; }
-  body.focus-on-engineer header a.focus-on, body.focus-on-engineer header a { color: #F18F7A; }
+  body.focus-on-engineer header a.focus-on, body.focus-on-engineer header a,
+  body.focus-on-engineer header section > h3 { color: #F18F7A; }
   body.focus-on-engineer header a.focus-on.engineer { color: white; }
 
   body.focus-on-devops header { background-color: #203A3F; }
   body.focus-on-devops article > div > section > h1 { color: #6EC6D8; }
-  body.focus-on-devops header a.focus-on, body.focus-on-devops header a { color: #6EC6D8; }
+  body.focus-on-devops header a.focus-on, body.focus-on-devops header a,
+  body.focus-on-devops header section > h3 { color: #6EC6D8; }
   body.focus-on-devops header a.focus-on.devops { color: white; }
 }
 
