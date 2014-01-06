@@ -222,7 +222,7 @@ p {
  */
 header nav > ul > li > a.director:before { content: "\f14e"; }
 header nav > ul > li > a.engineer:before { content: "\f0ad"; }
-header nav > ul > li > a.devops:before { content: "\f085"; }
+header nav > ul > li > a.systems:before { content: "\f085"; }
 
 section ul {
   padding-left: 20px;
@@ -233,11 +233,11 @@ section ul.icons {
   padding-left: 25px;
 }
 
-li.director, li.engineer, li.devops {
+li.director, li.engineer, li.systems {
   position: relative;
 }
 
-li.director:before, li.engineer:before, li.devops:before {
+li.director:before, li.engineer:before, li.systems:before {
   position: absolute;
   top: 0.125em;
   left: -25px;
@@ -250,14 +250,14 @@ li.director:before, li.engineer:before, li.devops:before {
 
 li.director:before { content: "\f14e"; }
 li.engineer:before { content: "\f0ad"; }
-li.devops:before { content: "\f085"; }
+li.systems:before { content: "\f085"; }
 
 @media screen and (min-width: 768px) {
   section ul.icons {
     padding-left: 30px;
   }
 
-  li.director:before, li.engineer:before, li.devops:before {
+  li.director:before, li.engineer:before, li.systems:before {
     left: -25px;
   }
 }
@@ -390,17 +390,17 @@ header h3 { font-size: 14px; }
   }
 
   /* discipline focus */
-  body.focus-on-director .engineer, body.focus-on-director .devops,
-  body.focus-on-engineer .director, body.focus-on-engineer .devops,
-  body.focus-on-devops .director, body.focus-on-devops .engineer { color: #555; }
+  body.focus-on-director .engineer, body.focus-on-director .systems,
+  body.focus-on-engineer .director, body.focus-on-engineer .systems,
+  body.focus-on-systems .director, body.focus-on-systems .engineer { color: #555; }
 
-  body.focus-on-director .engineer a, body.focus-on-director .devops a,
-  body.focus-on-engineer .director a, body.focus-on-engineer .devops a,
-  body.focus-on-devops .director a, body.focus-on-devops .engineer a { color: #555; }
+  body.focus-on-director .engineer a, body.focus-on-director .systems a,
+  body.focus-on-engineer .director a, body.focus-on-engineer .systems a,
+  body.focus-on-systems .director a, body.focus-on-systems .engineer a { color: #555; }
 
-  body.focus-on-director .engineer .exp, body.focus-on-director .devops .exp,
-  body.focus-on-engineer .director .exp, body.focus-on-engineer .devops .exp,
-  body.focus-on-devops .director .exp, body.focus-on-devops .engineer .exp { background-color: #222; }
+  body.focus-on-director .engineer .exp, body.focus-on-director .systems .exp,
+  body.focus-on-engineer .director .exp, body.focus-on-engineer .systems .exp,
+  body.focus-on-systems .director .exp, body.focus-on-systems .engineer .exp { background-color: #222; }
 
   body.focus-on-director header { background-color: #12A56D; }
   body.focus-on-director article > div > section > h1 { color: #12A56D; }
@@ -414,11 +414,11 @@ header h3 { font-size: 14px; }
   body.focus-on-engineer header section > h3 { color: #F18F7A; }
   body.focus-on-engineer header a.focus-on.engineer { color: white; }
 
-  body.focus-on-devops header { background-color: #203A3F; }
-  body.focus-on-devops article > div > section > h1 { color: #6EC6D8; }
-  body.focus-on-devops header a.focus-on, body.focus-on-devops header a,
-  body.focus-on-devops header section > h3 { color: #6EC6D8; }
-  body.focus-on-devops header a.focus-on.devops { color: white; }
+  body.focus-on-systems header { background-color: #203A3F; }
+  body.focus-on-systems article > div > section > h1 { color: #6EC6D8; }
+  body.focus-on-systems header a.focus-on, body.focus-on-systems header a,
+  body.focus-on-systems header section > h3 { color: #6EC6D8; }
+  body.focus-on-systems header a.focus-on.systems { color: white; }
 }
 
 /**
@@ -446,6 +446,10 @@ header h3 { font-size: 14px; }
   h3 {
     font-size: 16px;
     line-height: 1.3125;
+  }
+
+  code {
+    font-size: 0.7em;
   }
 
   .exp:before, .exp:after { display: inline; }
