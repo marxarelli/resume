@@ -1,17 +1,10 @@
-(Please see my [online résumé](http://dan.mutual.io) for a slightly better
-experience.)
-
 # Daniel Duvall
 ## Oakland, CA US
 ### dan@mutual.io | +1 510-325-6014
 ### github.com/marxarelli
 
-# Systems
-
-In the good old days I racked routers, configured subnets, and built
-RAID-backed database behemoths. Over the past 5 years—the better days—I have
-been managing a medium-sized and heavily scaled infrastructure on AWS, using
-tools like Puppet and my very own [Aether][1] shell.
+(This is the markdown version of my resume. Please see my
+[online résumé](http://dan.mutual.io) for a slightly better experience.)
 
 # Director
 
@@ -31,15 +24,22 @@ pipelines, and APIs. I love working in agile teams because there is great
 power in collaboration and I prefer open source because
 `{ innovation.should > capital }`
 
+# Systems
+
+In the good old days I racked routers, configured subnets, and built
+RAID-backed database behemoths. Over the past 5 years—the better days—I have
+been managing a medium-sized and heavily scaled infrastructure on AWS, using
+tools like Puppet and my very own [Aether][1] shell.
+
 # Current Position
 
-# Technical Director
+# Technical Director/Lead Engineer
 ## National Novel Writing Month
 ### Since January 2009
 
-As Technical Director at NaNoWriMo, I work with our executive, programmatic,
-and engineering teams to run the largest free online writing event for
-300,000+ children, teens, and adults annually.
+As Technical Director at NaNoWriMo, I work within our executive, programmatic,
+and distributed engineering teams to build and run the largest free online
+writing event for 300,000+ children, teens, and adults annually.
 
  - Helped to increase community engagement and fundraising through successful
    technology strategies
@@ -58,9 +58,15 @@ and engineering teams to run the largest free online writing event for
    NaNoWriMo experience
  - Released reusable application components as [open-source Ruby gems][2], most
    notably
-   - [Kiosk][3], a Ruby gem for decoupled WordPress integration
+   - [Kiosk][3], a Ruby gem for decoupled WordPress CMS integration
    - [Wye][4], a connection handler for ActiveRecord that provides support for
      federated databases
+ - Implemented a virtual classroom component for our Young Writers Program
+   that led to
+   - Thousands of empowered educators able to better measure their students'
+     performance
+   - Tens of thousands of engaged students communicating in more focused
+     classroom discussions
  - Instituted an agile development model that led to
    - Better application interfaces through continuous feedback
    - Higher confidence in deadlines and fundraising promises
