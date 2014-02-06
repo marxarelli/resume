@@ -61,7 +61,7 @@ writing event for 300,000+ children, teens, and adults annually.
    - [Kiosk][3], a Ruby gem for decoupled WordPress CMS integration
    - [Wye][4], a connection handler for ActiveRecord that provides support for
      federated databases
- - Implemented a virtual classroom component for our Young Writers Program
+ - Implemented the virtual classroom component of our Young Writers Program
    that led to
    - Thousands of empowered educators able to better measure their students'
      performance
